@@ -1,4 +1,4 @@
-package mock.payloads;
+package com.biswajit.mock.payloads;
 
 public  class MockPayLoads {
 	

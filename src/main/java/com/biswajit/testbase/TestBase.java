@@ -1,4 +1,4 @@
-package testBase;
+package com.biswajit.testbase;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

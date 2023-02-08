@@ -1,4 +1,4 @@
-package testBase;
+package com.biswajit.testbase;
 
 public class Path {
 

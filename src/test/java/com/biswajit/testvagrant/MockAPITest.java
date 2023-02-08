@@ -1,12 +1,13 @@
-package testvagrant.demo;
+package com.biswajit.testvagrant;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import com.biswajit.mock.payloads.MockPayLoads;
+import com.biswajit.testbase.TestBase;
+
 import io.restassured.path.json.JsonPath;
-import mock.payloads.MockPayLoads;
-import testBase.TestBase;
 
 public class MockAPITest extends TestBase {
 
