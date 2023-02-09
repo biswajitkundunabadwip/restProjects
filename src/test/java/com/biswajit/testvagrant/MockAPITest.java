@@ -22,7 +22,7 @@ public class MockAPITest extends TestBase {
 		 newJson = jsonPathExtracTor(MockPayLoads.rcbTeamResponse());
 	}
 
-	@Test
+	@Test (groups = "foregin-player-count-validations")
 	public void maxForegienPlayerValidations() {
 		int playerSizeinJson = newJson.get("player.size()");
 		for (int i = 0; i < playerSizeinJson; i++) {
@@ -35,7 +35,7 @@ public class MockAPITest extends TestBase {
 		Assert.assertEquals(foreginPlayerCounter, maxForeginPlayerAllowed);
 	}
 	
-	@Test
+	@Test(groups = "wicketkeeper-count-validations")
 	public void wickerKeperValidations() {
 		int playerSizeInJson = newJson.get("player.size()");
 		for (int i = 0; i < playerSizeInJson; i++) {

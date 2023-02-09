@@ -1,3 +1,13 @@
-<test name ="Automation validations">
-<cl
-</test>
+<suite name="IPL Automation suite validations">
+  <test name="Wicket keeper and foregin player validation">
+  <groups>
+<run>
+<include name="foregin-player-count-validations"/>
+<include name="wicketkeeper-count-validations"/>
+</run>
+  </groups>
+      <classes>
+      <class name="com.biswajit.testvagrant.MockAPITest"/>
+      </classes>
+  </test>
+  </suite>
