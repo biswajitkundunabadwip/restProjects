@@ -12,7 +12,7 @@
 				<include name="wicketkeeper-count-validations" />
 			</define>
 			<run>
-				<include name="wicketKeeperValidations" />
+				<include name="all" />
 			</run>
 		</groups>
 		<classes>
