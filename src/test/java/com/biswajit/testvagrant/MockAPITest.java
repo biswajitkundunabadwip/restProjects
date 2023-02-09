@@ -17,7 +17,7 @@ public class MockAPITest extends TestBase {
 	int maxAllwoedWickerKeeper = 1;
 	JsonPath newJson ;
 	
-	@BeforeClass
+	@BeforeClass(alwaysRun = true)
 	public void init() {
 		 newJson = jsonPathExtracTor(MockPayLoads.rcbTeamResponse());
 	}
@@ -26,7 +26,6 @@ public class MockAPITest extends TestBase {
 	public void maxForegienPlayerValidations() {
 		int playerSizeinJson = newJson.get("player.size()");
 		for (int i = 0; i < playerSizeinJson; i++) {
-			System.out.println("Current country name is " + newJson.get("player[" + i + "].country").toString());
 			String extractedCountryName = newJson.get("player[" + i + "].country").toString();
 			if (!extractedCountryName.equalsIgnoreCase("India")) {
 				foreginPlayerCounter++;
@@ -39,7 +38,6 @@ public class MockAPITest extends TestBase {
 	public void wickerKeperValidations() {
 		int playerSizeInJson = newJson.get("player.size()");
 		for (int i = 0; i < playerSizeInJson; i++) {
-			System.out.println("Current player name is " + newJson.get("player[" + i + "].name").toString());
 			String extractedRoleName = newJson.get("player[" + i + "].role").toString();
 			if (extractedRoleName.equalsIgnoreCase("Wicket-keeper")) {
 				wicketKeeperCounter++;

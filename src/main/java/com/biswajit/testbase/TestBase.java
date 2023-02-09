@@ -21,7 +21,7 @@ public class TestBase {
 		prop= new Properties();
 		prop.load(fis);
 	}
-	@BeforeClass
+	@BeforeClass(alwaysRun = true)
 	public void init() throws FileNotFoundException {
 		fis= new FileInputStream(Path.CONFIG_PATH);
 		try {
